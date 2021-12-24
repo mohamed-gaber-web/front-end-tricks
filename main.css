@@ -1,0 +1,82 @@
+/*
+1 - var() => function used to insert value in css property [ --name, value ]
+    -- global scope :root{ create var global }
+    -- local scope class name { create var local }
+*/
+
+
+:root { 
+    --primary_bg_color: green;
+    --primary_text_color: #fff;
+    --primary_size_font: 60px;
+} 
+
+* {
+    box-sizing: border-box;
+}
+/* 
+
+.variables { 
+    --font_size: 60px;
+}
+
+.variables {
+    background-color: var(--primary_bg_color);
+    width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    
+}
+
+.variables h1 {
+    color: var(--primary_text_color);
+    font-size: var(--font_size);
+}
+
+.variables_2 {
+    background-color: var(--primary_bg_color);
+    width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.variables_2 h1 {
+    color: var(--primary_text_color);
+    font-size: var(--primary_size_font);
+}
+
+@media(max-width: 700px) {
+    .variables {
+        --font_size: 30px;
+    }
+
+    :root {
+        --primary_size_font: 45px;
+    }
+} 
+*/
+
+/*****************************************************/
+
+/*
+1 - box-model - box-sizing
+    -- default => width => width + padding + border = width
+    -- default: box-sizing: content-box
+    -- box-sizing: border-box; border-box => Don't calculate padding and border with width any element
+*/
+
+.container {
+    background-color: var(--primary_bg_color);
+    width: 300px; /* width = 300px => 420px */
+    border: 15px solid red;
+    padding: 50px;
+    margin: 20px;
+    /* box-sizing: border-box; */
+}
